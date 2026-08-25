@@ -1,0 +1,114 @@
+.rts__main__header {
+    background: var(--rts-white);
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+
+
+    @include mq($lg) {
+        padding: 15px 50px;
+    }
+
+    @include mq($md) {
+        padding: 15px 40px;
+    }
+
+    @include mq($xs) {
+        padding: 15px 30px;
+    }
+
+
+
+    &.is__sticky {
+        position: fixed;
+        animation: stickyanimations 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        transition: padding 1s;
+        box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.06);
+        background: var(--rts-white);
+        z-index: 999;
+        width: 100%;
+        top: 0;
+
+        @include mq($md) {
+            padding: 15px 40px;
+        }
+
+        @include mq($xs) {
+            padding: 15px 30px;
+        }
+
+        &.header-two {
+            background: var(--heading-color)
+        }
+
+        &.header__three {
+            background: transparent;
+            box-shadow: none;
+
+            .header__inner {
+                box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.09);
+                padding: 10px 30px;
+            }
+
+            @include mq($md) {
+                padding: 0;
+            }
+        }
+
+    }
+
+    .header__inner {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background: var(--rts-white);
+        padding: 0 30px;
+        border-radius: 10px;
+    }
+
+    .main__left {
+        @include align-center;
+        gap: 60px;
+
+        @include mq($lg) {
+            gap: 30px;
+        }
+    }
+
+    .main__right {
+        @include align-center;
+        gap: 20px;
+
+        &__btn {
+            .rts-btn.btn-primary {
+                padding: 10px 32px;
+            }
+
+            @include mq($xs) {
+                display: none;
+            }
+        }
+    }
+
+    .main__menu__btn {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+
+        @include mq($lg) {
+            gap: 35px;
+        }
+    }
+}
+
+@keyframes stickyanimations {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

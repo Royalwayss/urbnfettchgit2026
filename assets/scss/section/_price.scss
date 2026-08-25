@@ -1,0 +1,136 @@
+.rts__price__area {
+     background-color: #F9FAFB;
+
+     .price__item__wrapper {
+          margin-top: 60px;
+
+          .price__single__item {
+               &.mid {
+                    .tag {
+                         background: #2D4217;
+                         text-align: center;
+                         display: block;
+                         width: 100%;
+                         font-size: 18px;
+                         font-weight: var(--f-medium);
+                         line-height: 1;
+                         color: var(--rts-white);
+                         padding: 9px 0;
+                         border-radius: 16px 16px 0 0;
+                    }
+
+                    .price__content {
+                         background: #E8F4E4;
+                         border-radius: 0 0 16px 16px;
+
+                         .price-btn-desc {
+                              .rts-btn.btn-primary {
+                                   background: var(--btn-color);
+                                   border-color: var(--btn-color);
+                              }
+                         }
+                    }
+               }
+
+               .price__content {
+                    padding: 80px 40px;
+                    background-color: var(--rts-white);
+                    border-radius: 16px;
+                    transition: var(--transition);
+
+                    @include mq($md){
+                         padding: 60px 30px;
+                    }
+
+                    .title {
+                         color: #121212;
+                         font-size: 32px;
+                         font-weight: var(--f-semi-bold);
+                         line-height: 1;
+                         letter-spacing: -0.06em;
+                         margin-bottom: 40px;
+                    }
+
+                    .price {
+                         color: var(--rts-black);
+                         font-size: 80px;
+                         font-family: var(--font-inter);
+                         font-weight: var(--f-regular);
+                         letter-spacing: -0.02em;
+                         margin-bottom: 40px;
+
+                         @include mq($lg){
+                              font-size: 60px;
+                         }
+
+                         .dollar {
+                              font-size: 28px;
+                              vertical-align: middle;
+                              margin-right: -5px;
+                         }
+
+
+                         .per-mnt {
+                              display: inline-block;
+                              font-size: 18px;
+                              font-family: var(--font-inter);
+                              color: rgba(18, 18, 18, 0.5);
+
+                         }
+                    }
+
+                    .price-btn-desc {
+                         text-align: center;
+                         margin-bottom: 40px;
+
+                         .rts-btn.btn-primary {
+                              max-width: 100%;
+                              justify-content: center;
+                              background: transparent;
+                              border: 1px solid rgba(0, 0, 0, 0.15);
+                              margin-bottom: 10px;
+
+                              &::before {
+                                   background: var(--btn-color);
+                              }
+
+                              &:hover {
+                                   color: var(--rts-black);
+                                   border: 1px solid var(--btn-color);
+                              }
+                         }
+
+                         .desc {
+                              color: rgba(18, 18, 18, 0.5);
+                         }
+                    }
+
+                    .price__list {
+                         padding-left: 0px;
+
+                         li {
+                              color: rgba(18, 18, 18, 0.75);
+                              display: flex;
+                              align-items: center;
+                              gap: 8px;
+                              font-size: 16px;
+                              font-family: var(--font-primary);
+                              font-weight: var(--f-regular);
+                              line-height: 1;
+                              letter-spacing: 0.01em;
+
+                              @include mq($md) {
+                                   font-size: 14px;
+                              }
+
+                              &:not(:last-child) {
+                                   margin-bottom: 16px;
+                              }
+                         }
+                    }
+               }
+
+          }
+     }
+
+}

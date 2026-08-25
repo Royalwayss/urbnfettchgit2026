@@ -1,0 +1,4301 @@
+/* ==========================
+   HEADER
+========================== */
+@import url('https://fonts.cdnfonts.com/css/nexa-bold');
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nexa', sans-serif !important;
+}
+
+.urban-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 0px 0;
+    transition: all .3s ease;
+}
+.rts-service-wrapper .single-service .content .title{
+    font-size:20px;
+}
+.urban-heading-sub {
+    font-size: 30px;
+}
+
+.urban-heading-para {
+    width: 80%;
+    text-align: center;
+}
+
+p {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: #000 !important;
+}
+
+.urban-para-main {
+    width: 75%;
+    margin: auto;
+}
+
+.urban-header-navbar {
+    padding: 0;
+    background-color: #ffffffbf;
+}
+
+.urban-header-logo img {
+    width: 100%;
+}
+
+.urban-header-menu {
+    gap: 25px;
+    align-items: center;
+}
+.urban-header-menu .nav-item,
+.urban-header-menu .has-dropdown {
+    position: relative;
+    list-style: none;
+}
+
+.urban-header-menu .nav-link,
+.urban-header-menu .has-dropdown > a {
+    color: #222;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 30px 0;
+    display: block;
+}
+
+/* Dropdown */
+.urban-header-menu .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 250px;
+    background: #fff;
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all .3s ease;
+    z-index: 999;
+}
+
+.urban-header-menu .sub-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #222;
+    text-decoration: none;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.urban-header-menu .sub-menu li a:hover {
+    background: #6b9d37;
+    color: #fff;
+}
+
+/* Hover Dropdown */
+.urban-header-menu .has-dropdown:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Arrow */
+/* .urban-header-menu .has-dropdown > a::after {
+    content: "\f107";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-left: 8px;
+    font-size: 12px;
+} */
+
+.urban-header-menu .nav-link {
+    color: #222;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+}
+
+.urban-header-menu .nav-link.active {
+    color: #6b9d37;
+}
+
+.urban-header-menu .nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 3px;
+    background: #6b9d37;
+}
+
+.urban-header-btn {
+    background: #6b9d37;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.urban-header-btn:hover {
+    background: #4b8924;
+    color: #fff;
+}
+
+.urban-header.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 0px 0;
+    animation: headerSlide .3s ease;
+}
+
+@keyframes headerSlide {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+/* Ensure the banner container is styled for absolute overlay positioning */
+.rts__breadcrumb__content.has-overlay {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Semi-transparent dark overlay */
+.rts__breadcrumb__content.has-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here (0.5 = 50%) */
+    z-index: -1;
+}
+
+/* Ensure text & links sit above the overlay */
+.rts__breadcrumb__content.has-overlay * {
+    position: relative;
+    z-index: 2;
+}
+.urban-hero {
+    position: relative;
+}
+
+.urban-hero-slide {
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.urban-hero-slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.urban-hero-slide .container {
+    position: relative;
+    z-index: 2;
+}
+
+.urban-hero-content {
+    /* max-width:650px; */
+}
+
+.urban-hero-content h1 {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #052820;
+}
+
+.urban-hero-content h1 span {
+    color: #6b9d37;
+}
+
+.urban-hero-line {
+    width: 70px;
+    height: 5px;
+    background: #6b9d37;
+    margin: 25px 0;
+}
+
+.urban-hero-content p {
+    font-size: 26px;
+    /* max-width:550px; */
+    color: #444;
+}
+
+
+/* ==========================
+   STATS BAR
+========================== */
+
+.urban-hero-stats {
+    /* position: absolute; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: url(../images/urban/facts-bg-home.jpg);
+    z-index: 10;
+    padding: 25px 0;
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.urban-hero-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+    border-right: 1px solid rgba(255, 255, 255, .25);
+    padding-left: 20px;
+}
+
+.urban-hero-stat-icon {
+    font-size: 42px;
+    color: #6b9d37;
+}
+
+.urban-hero-stat-item h4 {
+    margin: 0;
+    font-size: 36px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.urban-hero-stat-item p {
+    margin: 0;
+    font-size: 20px;
+    color: #fff !important;
+    opacity: .9;
+}
+
+.col-lg-3:last-child .urban-hero-stat-item {
+    border-right: none;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+.urba-heading-main-2 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.urba-heading-main {
+    line-height: 120%;
+    font-size: 40px;
+    font-weight: 600;
+       background: linear-gradient(to top, #2d4217 10%, #6b9d37 80%);
+ /* background: linear-gradient(to bottom, #2D4217 0%, #6B9D37 100%); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.rts__banner__area {
+    height: 900px;
+}
+
+.urban-sustain-section {
+    background: #fff;
+    overflow: hidden;
+}
+
+.urban-sustain-heading {
+    max-width: 900px;
+    margin: 0 auto 50px;
+}
+
+.urban-sustain-heading p {
+    font-size: 24px;
+    line-height: 1.6;
+    color: #222;
+    max-width: 950px;
+    margin: auto;
+}
+
+.urban-sustain-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    position: relative;
+}
+
+.urban-sustain-side {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    width: 320px;
+}
+
+.urban-sustain-item {
+    position: relative;
+}
+
+.urban-sustain-content span {
+    display: block;
+    font-size: 42px;
+    font-weight: 500;
+    color: #6b9d37;
+    margin-bottom: 8px;
+}
+
+.urban-sustain-content h4 {
+    font-size: 30px;
+    color: #6b9d37;
+    font-weight: 600;
+    line-height: 110%;
+    margin-bottom: 15px;
+}
+
+.urban-sustain-content p {
+    font-size: 24px;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Center Section */
+
+.urban-sustain-center {
+    position: relative;
+    width: 650px;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animation */
+
+@keyframes spinClockwise {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinCounterClockwise {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+/* Outer Dashed Ring */
+
+.urban-sustain-ring {
+    position: absolute;
+    width: 560px;
+    height: 560px;
+    border: 2px dashed #6b9d37;
+    border-radius: 50%;
+    animation: spinClockwise 20s linear infinite;
+    z-index: 1;
+}
+
+/* Image Circle */
+
+.urban-sustain-image {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.urban-sustain-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: #6b9d37;
+    border-bottom-color: #6b9d37;
+    animation: spinCounterClockwise 15s linear infinite;
+    z-index: 1;
+}
+
+.urban-sustain-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+
+/* Icons */
+
+.urban-sustain-icon {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border: 2px solid #6b9d37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #6b9d37;
+    font-size: 42px;
+}
+
+.urban-sustain-left .urban-sustain-item:nth-child(1) .urban-sustain-icon {
+    right: -100px;
+    top: 10px;
+}
+
+.urban-sustain-left .urban-sustain-item:nth-child(2) .urban-sustain-icon {
+    right: -100px;
+    top: 10px;
+}
+
+.urban-sustain-right .urban-sustain-item:nth-child(1) .urban-sustain-icon {
+    left: -100px;
+    top: 10px;
+}
+
+.urban-sustain-right .urban-sustain-item:nth-child(2) .urban-sustain-icon {
+    left: -100px;
+    top: 10px;
+}
+
+/* Green Dots */
+
+.urban-sustain-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #6b9d37;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.urban-sustain-dot-left-top {
+    left: 75px;
+    top: 168px;
+}
+
+.urban-sustain-dot-left-bottom {
+    left: 75px;
+    bottom: 185px;
+}
+
+.urban-sustain-dot-right-top {
+    right: 80px;
+    top: 165px;
+}
+
+.urban-sustain-dot-right-bottom {
+    right: 75px;
+    bottom: 184px;
+}
+
+/* Connector Lines */
+
+.urban-sustain-left .urban-sustain-item::after {
+    content: '';
+    position: absolute;
+    right: -160px;
+    top: 55px;
+    width: 70px;
+    height: 2px;
+    background: #6b9d37;
+}
+
+.urban-sustain-right .urban-sustain-item::before {
+    content: '';
+    position: absolute;
+    left: -160px;
+    top: 55px;
+    width: 97px;
+    height: 2px;
+    background: #6b9d37;
+}
+
+/* Responsive */
+
+
+
+.green-gradient-background {
+    background: #2D4217;
+    /* Fallback for older browsers */
+    background: linear-gradient(90deg, #2D4217 0%, #6B9D37 100%) !important;
+    color: #fff;
+
+    /* Optional: Adjust height and width depending on your layout */
+    width: 100%;
+    /* height: 250px;  */
+}
+
+.green-gradient-background .icon img {
+    width: 70px;
+}
+
+
+
+.urban-innovation {
+    background: #fff;
+    overflow: hidden;
+}
+
+.urban-innovation-experts {
+    position: absolute;
+    left: 30px;
+    bottom: 55px;
+    background: #fff;
+    padding: 18px 25px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .10);
+}
+
+.urban-innovation-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #eef8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b9d37;
+    font-size: 24px;
+}
+
+.urban-innovation-experts h3 {
+    margin: 0;
+    color: #6b9d37;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.urban-innovation-experts p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #333;
+}
+
+
+.urban-innovation-content p {
+    color: #222;
+    font-size: 22px;
+    line-height: 1.7;
+}
+
+.urban-innovation-progress-box {
+    text-align: center;
+}
+
+.urban-innovation-circle {
+    width: 140px;
+    height: 140px;
+    position: relative;
+    margin: 0 auto 20px;
+}
+
+.urban-innovation-circle svg {
+    width: 140px;
+    height: 140px;
+    transform: rotate(-90deg);
+}
+
+.urban-innovation-circle circle {
+    fill: none;
+    stroke-width: 8;
+}
+
+.urban-innovation-bg {
+    stroke: #d8e9cf;
+}
+
+.urban-innovation-progress {
+    stroke: #6b9d37;
+    stroke-linecap: round;
+    stroke-dasharray: 377;
+    stroke-dashoffset: 377;
+    transition: 2s ease;
+}
+
+.urban-innovation-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 78px;
+    height: 78px;
+    background: #f4faef;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b9d37;
+    font-size: 34px;
+}
+
+.urban-innovation-center img {
+    width: 50px;
+}
+
+.urban-innovation-progress-box h3 {
+    color: #6b9d37;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.urban-innovation-progress-box p {
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+
+/* Container Wrapper defining the relative space */
+.innvo-img-urban {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    /* Provides breathing room for the overlapping layouts */
+    padding-bottom: 35%;
+}
+
+/* Top Left Image Layer */
+.innvo-img-urban .urban-img-top {
+    width: 78%;
+    position: relative;
+    z-index: 1;
+}
+
+.innvo-img-urban .urban-img-top img {
+    border-radius: 2rem;
+    width: 100%;
+    display: block;
+}
+
+/* Bottom Right Image Layer */
+.innvo-img-urban .urban-img-bottom {
+    width: 350px;
+    position: absolute;
+    right: -75px;
+    bottom: 100px;
+    z-index: 2;
+}
+
+.innvo-img-urban .urban-img-bottom img {
+    border-radius: 2rem;
+    width: 100%;
+    display: block;
+    border: 6px solid #ffffff;
+    /* Smooth separation from the background image */
+}
+
+/* Overlapping Stats Badge */
+.innvo-img-urban .urban-badge {
+    position: absolute;
+    left: 15%;
+    bottom: 25%;
+    z-index: 3;
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    padding: 1.25rem 1.75rem;
+    min-width: 260px;
+}
+
+/* Icon circular background wrapper */
+.innvo-img-urban .badge-icon-wrapper {
+    background-color: #f1f6ec;
+    /* Tinted soft green */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+/* Number text styling */
+.innvo-img-urban .badge-number {
+    color: #6b9d37;
+    /* Utilizing your mid-green brand color */
+    font-size: 1.75rem;
+    font-family: sans-serif;
+}
+
+/* Description label styling */
+.innvo-img-urban .badge-text {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #333333;
+}
+
+
+
+
+/* footer  */
+.urban-footer {
+    background: #fff;
+    overflow: hidden;
+}
+
+/* CTA */
+
+.urban-footer-cta {
+    /* background:linear-gradient(90deg,#0e3a12,#1f5f18); */
+    background-image: url(../images/urban/cta-bg.png);
+    border-radius: 25px;
+    padding: 35px 45px;
+    margin-bottom: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.urban-footer-cta-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.urban-footer-cta-icon {
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b9d37;
+    font-size: 40px;
+}
+
+.urban-footer-cta-left h2 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.urban-footer-cta-left h3 {
+    color: #6b9d37;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 120%;
+}
+
+.urban-footer-divider {
+    width: 1px;
+    height: 90px;
+    background: rgba(255, 255, 255, .2);
+    position: absolute;
+    left: -20px;
+}
+
+.urban-footer-cta-text {
+    color: #fff !important;
+    font-size: 22px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.border-right-cta {
+    border-right: 2px solid #6b9d37;
+}
+
+.urban-footer-btn {
+    border: 2px solid #6b9d37;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.urban-footer-btn:hover {
+    color: #fff;
+}
+
+.urban-footer-flask-img {
+    max-height: 160px;
+}
+
+/* Main Footer */
+
+.urban-footer-main {
+    /* display:grid; */
+    grid-template-columns: 1.2fr 1fr 1.2fr 1fr 1.1fr;
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+.urban-footer-brand img {
+    max-width: 250px;
+    margin-bottom: 30px;
+}
+
+.urban-footer-brand p {
+    color: #444;
+    font-size: 20px;
+    width: 80%;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.urban-footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.urban-footer-social a {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #b6d59d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #214d1f;
+    text-decoration: none;
+}
+
+.urban-footer-widget h4,
+.urban-footer-contact h4 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2D4217;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.urban-footer-widget h4::after,
+.urban-footer-contact h4::after {
+    content: "";
+    width: 35px;
+    height: 3px;
+    background: #6b9d37;
+    display: block;
+    margin-top: 12px;
+}
+
+.urban-footer-widget ul,
+.urban-footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.urban-footer-widget li {
+    margin-bottom: 18px;
+}
+
+.urban-footer-widget a {
+    color: #444;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+}
+
+.urban-footer-widget a::before {
+    content: "›";
+    color: #6b9d37;
+    margin-right: 10px;
+}
+
+.urban-footer-contact {
+    border-left: 1px solid #e6e6e6;
+    padding-left: 40px;
+}
+
+.urban-footer-contact li {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+    align-items: center;
+}
+
+.urban-footer-contact span {
+    min-width: 42px;
+    width: 42px;
+    height: 42px;
+    background: #edf8e5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b9d37;
+}
+
+/* Bottom */
+
+.urban-footer-bottom {
+    border-top: 1px solid #e9e9e9;
+    padding: 25px 0;
+}
+
+.urban-footer-bottom p {
+    margin: 0;
+    color: #555;
+}
+
+.urban-footer-bottom a {
+    color: #555;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.urban-footer-bottom span {
+    color: #6b9d37;
+}
+
+/* Responsive */
+
+
+.urban-footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.urban-footer-social a {
+    animation: urbanSocialFade 0.8s ease forwards;
+}
+/* home industry we serve */
+.urbn-we-serve-home-section{
+    background:#fff;
+}
+
+.urbn-we-serve-home-title{
+    font-size:46px;
+    font-weight:700;
+    color:#0f89d0;
+    margin-bottom:50px;
+}
+
+.urbn-we-serve-home-slider-wrapper{
+    position:relative;
+    padding:0 60px;
+}
+
+/* Fixed Timeline */
+.urbn-we-serve-home-slider-wrapper::before{
+    content:"";
+    position:absolute;
+    left:60px;
+    right:60px;
+    top:183px;
+    height:2px;
+    background:#d8d8d8;
+    z-index:1;
+}
+
+.urbn-we-serve-home-slider{
+    position:relative;
+    z-index:2;
+    overflow:hidden;
+}
+
+.urbn-we-serve-home-item{
+    text-align:center;
+}
+
+.urbn-we-serve-home-image{
+    width:160px;
+    height:160px;
+    margin:auto;
+    border-radius:50%;
+    overflow:hidden;
+}
+
+.urbn-we-serve-home-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.urbn-we-serve-home-dot{
+    width:14px;
+    height:14px;
+    background:#6b9d37;
+    border-radius:50%;
+    display:block;
+    margin:30px auto 28px;
+    position:relative;
+    z-index:5;
+}
+
+.urbn-we-serve-home-item h5{
+    font-size:20px;
+    line-height:1.5;
+    font-weight:500;
+    margin:0;
+}
+
+/* Arrows */
+
+.urbn-we-serve-home-arrow{
+    position:absolute;
+    top:183px;
+    transform:translateY(-50%);
+    width:40px;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+    z-index:20;
+    cursor:pointer;
+    color:#6b9d37;
+    font-size:32px;
+    transition:.3s;
+}
+
+.urbn-we-serve-home-arrow:hover{
+    color:#6b9d37;
+}
+
+.urbn-we-serve-home-prev{
+    left:10px;
+}
+
+.urbn-we-serve-home-next{
+    right:10px;
+}
+
+.swiper-button-disabled{
+    opacity:.35;
+    pointer-events:none;
+}
+
+@media(max-width:991px){
+
+.urbn-we-serve-home-slider-wrapper{
+    padding:0 45px;
+}
+
+.urbn-we-serve-home-slider-wrapper::before{
+    left:45px;
+    right:45px;
+    top:145px;
+}
+
+.urbn-we-serve-home-arrow{
+    top:145px;
+}
+
+.urbn-we-serve-home-image{
+    width:120px;
+    height:120px;
+}
+
+.urbn-we-serve-home-item h5{
+    font-size:17px;
+}
+
+}
+
+@media(max-width:576px){
+
+.urbn-we-serve-home-slider-wrapper{
+    padding:0 35px;
+}
+
+.urbn-we-serve-home-slider-wrapper::before{
+    left:35px;
+    right:35px;
+    top:123px;
+}
+
+.urbn-we-serve-home-arrow{
+    top:123px;
+}
+
+.urbn-we-serve-home-image{
+    width:100px;
+    height:100px;
+}
+
+}
+
+
+/* end  */
+@keyframes urbanSocialFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.urban-products {
+    /* background: linear-gradient(to top,
+            rgb(45, 66, 23),
+            rgb(77, 113, 40),
+            rgb(106, 155, 55)) !important; */
+
+      background:linear-gradient(2deg, #2D4217 0%, #6B9D37 100%) !important;
+
+    /* padding: 100px 0; */
+}
+
+.urban-products-heading {
+    max-width: 850px;
+    margin: auto;
+}
+
+
+.urban-products-heading p {
+    color: #fff;
+    font-size: 28px;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: auto;
+    opacity: .95;
+}
+
+/* Card */
+
+.urban-products-card {
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+    transition: .4s ease;
+}
+
+.urban-products-card:hover {
+    transform: translateY(-10px);
+}
+
+.urban-products-image {
+    height: 430px;
+    overflow: hidden;
+}
+
+.urban-products-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .6s;
+}
+
+.urban-products-card:hover .urban-products-image img {
+    transform: scale(1.08);
+}
+
+.urban-products-content {
+    background: #fff;
+    border-radius: 18px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    height: 150px;
+}
+
+.urban-products-icon {
+    width: 52px;
+    min-width: 52px;
+    height: 52px;
+    background: #6b9d37;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+}
+
+.urban-products-text {
+    flex: 1;
+}
+
+.urban-products-text h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+.urban-products-text p {
+    font-size: 13px;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.urban-products-arrow {
+    width: 28px;
+    min-width: 28px;
+    height: 28px;
+    border: 1px solid #d8d8d8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    text-decoration: none;
+    font-size: 11px;
+    transition: .4s;
+}
+
+.urban-products-card:hover .urban-products-arrow {
+    background: #6b9d37;
+    color: #fff;
+    border-color: #6b9d37;
+    transform: rotate(45deg);
+}
+
+/* inner banner */
+.inner-banner {
+    border-radius: 0px !important;
+    margin-top: 0px !important;
+}
+
+.urba-heading-main-inner {
+    line-height: 120%;
+    font-size: 40px;
+    font-weight: 600;
+    background: linear-gradient(to bottom, #6b9d37 0%, #45841a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: unset;
+}
+
+.urba-heading-main-inner-2 {
+    line-height: 120%;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: unset;
+}
+
+/* Common Card Styles */
+        .home-why-choose-us-card {
+            border-radius: 24px;
+            overflow: hidden;
+            border: none;
+            height: 100%;
+            position: relative;
+            background-color: #ffffff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+            cursor: pointer;
+        }
+
+        .home-why-choose-us-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .home-why-choose-us-card-dark {
+            background-color: #2D4217;
+            color: #ffffff;
+        }
+
+        .home-why-choose-us-card-body {
+            padding: 45px;
+            z-index: 5;
+            position: relative;
+            height: 100%;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Icon Styles */
+        .home-why-choose-us-icon-wrapper {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background-color: #6b9d37;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .home-why-choose-us-card:hover .home-why-choose-us-icon-wrapper {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .home-why-choose-us-icon-wrapper i {
+            color: #fff;
+            font-size: 1.8rem;
+        }
+
+        .home-why-choose-us-card-title {
+            font-weight: 800;
+            font-size: 1.6rem;
+            margin-bottom: 18px;
+            letter-spacing: -0.5px;
+            color: #fff;
+        }
+
+        .home-why-choose-us-card-text {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 0;
+            
+        }
+
+        /* Full Background Image Styles */
+        .home-why-choose-us-full-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: transform 0.6s ease;
+        }
+
+        .home-why-choose-us-card:hover .home-why-choose-us-full-bg {
+            transform: scale(1.1);
+        }
+
+        .home-why-choose-us-bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+        /* Dark Card Overlay (Gradient from dark to transparent) */
+        .home-why-choose-us-card-dark .home-why-choose-us-bg-overlay {
+            /* background: linear-gradient(90deg, #2D4217 40%, rgba(24, 47, 26, 0.4) 100%); */
+        }
+
+        /* Light Card Overlay (Gradient from white to transparent) */
+        .home-why-choose-us-card:not(.home-why-choose-us-card-dark) .home-why-choose-us-bg-overlay {
+            /* background: linear-gradient(90deg, #ffffff 45%, rgba(255, 255, 255, 0.1) 100%); */
+        }
+
+        .home-why-choose-us-full-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center right;
+        }
+
+        /* Grid Adjustments */
+        .home-why-choose-us-main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 0.85fr;
+            grid-gap: 25px;
+        }
+
+        .home-why-choose-us-left-col, .home-why-choose-us-center-col {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Tall Sidebar Card */
+        .home-why-choose-us-sidebar-card {
+            background-color: #2D4217;
+            color: #ffffff;
+        }
+
+        .home-why-choose-us-sidebar-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+            z-index: 1;
+            transition: transform 0.8s ease, opacity 0.4s ease;
+        }
+
+        .home-why-choose-us-sidebar-card:hover .home-why-choose-us-sidebar-bg {
+            transform: scale(1.05);
+            opacity: 0.45;
+        }
+
+        .home-why-choose-us-contact-info {
+            margin-top: auto;
+            padding-top: 40px;
+        }
+
+        .home-why-choose-us-phone {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+
+        .home-why-choose-us-phone-icon {
+            width: 50px;
+            height: 50px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2D4217;
+            box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .home-why-choose-us-sidebar-card:hover .home-why-choose-us-phone-icon {
+            background: #6b9d37;
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        .home-why-choose-us-btn-contact {
+            border: 2px solid #ffffff;
+            border-radius: 50px;
+            padding: 14px 35px;
+            color: #ffffff;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .home-why-choose-us-btn-contact:hover {
+            background: #6b9d37;
+            border-color: #6b9d37;
+            color: #ffffff;
+            padding-right: 45px;
+        }
+
+        .home-why-choose-us-btn-contact i {
+            transition: transform 0.3s ease;
+        }
+
+        .home-why-choose-us-btn-contact:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Responsiveness */
+        @media (max-width: 1200px) {
+            .home-why-choose-us-main-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .home-why-choose-us-right-col {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .home-why-choose-us-main-grid {
+                grid-template-columns: 1fr;
+            }
+            .home-why-choose-us-right-col {
+                grid-column: span 1;
+            }
+            .home-why-choose-us-card-body {
+                padding: 35px;
+            }
+            .home-why-choose-us-card:not(.home-why-choose-us-card-dark) .home-why-choose-us-bg-overlay {
+                background: linear-gradient(180deg, rgba(255,255,255,0.95) 60%, rgba(255,255,255,0.4) 100%);
+            }
+            .home-why-choose-us-card-dark .home-why-choose-us-bg-overlay {
+                background: linear-gradient(180deg, #2D4217 60%, rgba(24, 47, 26, 0.6) 100%);
+            }
+        }
+/* end css */
+/* Custom Main Title & Double Underline Decoration */
+.urbn-about-mv-section {
+    background-color: #f8f9fa;
+}
+
+.urbn-about-mv-main-title {
+    line-height: 120%;
+    font-size: 50px;
+    font-weight: 600;
+    background: linear-gradient(to bottom, #6b9d37 0%, #45841a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: unset;
+}
+
+.urbn-about-mv-underline-container {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 140px;
+    margin-top: 15px;
+}
+
+.urbn-about-mv-line-top {
+    height: 3px;
+    background-color: #2D4217;
+    /* Dark Slate Teal */
+    width: 100%;
+}
+
+.urbn-about-mv-line-bottom {
+    height: 3px;
+    background-color: #6b9d37;
+    /* Lime Green */
+    width: 100%;
+}
+
+/* Base Style for Gray Background Banner Strips */
+.urbn-about-mv-card {
+    background-color: #fff;
+    min-height: 120px;
+    padding: 20px 25px;
+    border-radius: 4px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+.urbn-about-mv-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Circle Image Container Styling */
+.urbn-about-mv-img-box {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    transition: transform 0.4s ease;
+}
+
+/* Image zoom effect on card hover */
+.urbn-about-mv-card:hover .urbn-about-mv-img-box {
+    transform: translateY(-50%) scale(1.05);
+}
+
+/* Mission Specific Positioning & Tint Overlay */
+.urbn-about-mv-card-mission {
+    padding-left: 20px;
+    margin-left: 0px;
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;
+}
+
+.urbn-about-mv-img-mission {
+    /* left: -85px; */
+}
+
+.urbn-about-mv-img-mission::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(43, 76, 89, 0.45);
+    /* Teal overlay */
+    mix-blend-mode: multiply;
+}
+
+/* Vision Specific Positioning & Tint Overlay */
+.urbn-about-mv-card-vision {
+    padding-right: 20px;
+    margin-right: 0px;
+    border-top-right-radius: 300px;
+    border-bottom-right-radius: 300px;
+}
+
+
+.urbn-about-mv-img-vision {
+    right: 10px;
+}
+
+.urbn-about-mv-img-vision::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    mix-blend-mode: multiply;
+}
+
+.urbn-about-mv-card-title {
+    font-size: 1.75rem;
+    color: #111111;
+}
+
+.urbn-about-mv-card-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- Core Values Design System --- */
+.urbn-about-mv-value-card {
+    background-color: #f8f9fa;
+    border-left: 4px solid #2D4217;
+    /* Accent boundary matching top line */
+    border-radius: 0 4px 4px 0;
+    transition: all 0.3s ease;
+}
+
+.urbn-about-mv-value-card:hover {
+    border-left-color: #6b9d37;
+    /* Alternates to green line on hover */
+    background-color: #f1f3f5;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.urbn-about-mv-value-title {
+    font-size: 1.35rem;
+    color: #111111;
+}
+
+.urbn-about-mv-bullet-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #6b9d37;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.urbn-about-mv-value-text {
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   CSS CSS ANIMATIONS SYSTEM
+   ========================================================================== */
+
+.urbn-about-mv-animate-fade-in-left {
+    opacity: 0;
+    animation: urbnMvFadeInLeft 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.urbn-about-mv-animate-slide-up {
+    opacity: 0;
+    animation: urbnMvSlideUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.urbn-about-mv-animate-zoom-in {
+    opacity: 0;
+    animation: urbnMvZoomIn 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes urbnMvFadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes urbnMvSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes urbnMvZoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.urban-why-choose-us {
+   background: linear-gradient(2deg, #2D4217 0%, #6B9D37 100%) !important;
+    padding: 80px 0;
+}
+
+.choose-us-points li {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 1rem;
+
+}
+
+.choose-us-points li i {
+    margin-right: 10px;
+}
+
+/* team css */
+/* Section Container */
+.urbn-team-section {
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+/* Asymmetric Header Layout */
+.urbn-team-main-title {
+    font-size: 3rem;
+    color: #111111;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+/* Double-line corporate brand line */
+.urbn-team-underline-container {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 140px;
+    margin-top: 15px;
+}
+
+.urbn-team-line-top {
+    height: 3px;
+    background-color: #2D4217;
+    width: 100%;
+}
+
+.urbn-team-line-bottom {
+    height: 3px;
+    background-color: #6b9d37;
+    width: 100%;
+}
+
+.urbn-team-intro-text {
+    font-size: 1.05rem;
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* Leadership Cards Styling */
+.urbn-team-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-right: 5px solid #e8e8e8;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    position: relative;
+    overflow: hidden;
+    height: 675px;
+}
+
+/* .urbn-team-card:hover {
+            transform: translateY(-6px);
+            background-color: #ffffff;
+            box-shadow: 0 15px 35px rgba(43, 76, 89, 0.08);
+            border-left-color: #6b9d37;
+        } */
+
+/* Image Wrapper with Tint Layer */
+.urbn-team-img-wrapper {
+    /* width: 200px;
+    height: 250px; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex-shrink: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #2D4217;
+}
+.about-leader-margin{
+    margin-top: 60px;
+}
+.urbn-team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Blend-in subtle color gradient */
+.urbn-team-img-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(43, 76, 89, 0.4), transparent);
+    opacity: 0.85;
+    transition: opacity 0.4s ease;
+}
+
+.urbn-team-card:hover .urbn-team-img {
+    transform: scale(1.06);
+}
+
+.urbn-team-card:hover .urbn-team-img-wrapper::after {
+    opacity: 0.4;
+}
+
+/* Content Text Details */
+.urbn-team-details {
+    padding-left: 15px;
+}
+
+.urbn-team-name {
+    font-size: 30px;
+    line-height: 120%;
+    color: #111111;
+    letter-spacing: -0.3px;
+}
+
+.urbn-team-designation {
+    font-size: 1.05rem;
+    color: #2D4217;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.urbn-team-bio {
+    font-size: 0.98rem;
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* Icon accent decoration on cards */
+.urbn-team-quote-accent {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-size: 3rem;
+    color: rgba(43, 76, 89, 0.04);
+    pointer-events: none;
+    transition: color 0.4s ease;
+}
+
+.urbn-team-card:hover .urbn-team-quote-accent {
+    color: rgba(139, 184, 65, 0.08);
+}
+
+/* ==========================================================================
+           ANIMATIONS SYSTEM
+           ========================================================================== */
+
+.urbn-team-animate-fade-left {
+    opacity: 0;
+    animation: urbnTeamFadeLeft 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.urbn-team-animate-slide-up {
+    opacity: 0;
+    animation: urbnTeamSlideUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes urbnTeamFadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes urbnTeamSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* contact us page */
+.urbn-contact-section {
+    background: #f5f5f5;
+}
+
+.urbn-contact-wrapper {
+    background: #ffffff;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.urbn-contact-form-area {
+    padding: 50px 70px;
+}
+
+.urbn-contact-title {
+    font-size: 56px;
+    font-weight: 700;
+    color: #2D4217;
+    margin-bottom: 20px;
+}
+
+.urbn-contact-desc {
+    color: #6d6d6d;
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 50px;
+    /* max-width: 420px; */
+}
+
+.urbn-contact-input {
+    border: 0;
+    border-bottom: 1px solid #dcdcdc;
+    border-radius: 0;
+    padding: 14px 0;
+    box-shadow: none !important;
+    background: transparent;
+}
+
+.urbn-contact-input:focus {
+    border-color: #6b9d37;
+}
+
+.urbn-contact-btn {
+    width: 260px;
+    height: 55px;
+    border-radius: 0;
+    background: #2D4217;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.urbn-contact-btn:hover {
+    background: #6b9d37;
+    color: #fff;
+}
+
+.urbn-contact-info {
+    background: #2D4217;
+    color: #fff;
+    padding: 70px 55px;
+    position: relative;
+    z-index: 2;
+    margin: 60px 0;
+}
+
+.urbn-contact-info-title {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.urbn-contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 35px;
+    font-size: 15px;
+}
+
+.urbn-contact-icon {
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b9d37;
+    flex-shrink: 0;
+}
+
+.urbn-contact-shape {
+    position: absolute;
+    background: #6b9d37;
+    z-index: 1;
+}
+
+.urbn-contact-shape-top {
+    width: 250px;
+    height: 140px;
+    top: 0;
+    right: 0;
+}
+
+.urbn-contact-shape-left {
+    width: 45px;
+    height: 45px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.urbn-contact-shape-bottom {
+    width: 250px;
+    height: 130px;
+    right: 0;
+    bottom: 0;
+}
+
+.urbn-contact-info {
+    position: relative;
+    overflow: visible;
+}
+
+.urbn-contact-social {
+    position: absolute;
+    right: 10%;
+    bottom: -70px;
+    /* width: 180px; */
+    /* height: 70px; */
+    background: #6b9d37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    /* padding: 20px; */
+}
+
+.urbn-contact-social-link {
+    color: #2D4217;
+    font-size: 24px;
+    transition: all .3s ease;
+}
+
+.urbn-contact-social-link:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* ============================================================
+       URBN-RD CUSTOM STYLES (NO PARALLAX & NO :root)
+       ============================================================ */
+
+/* Section Main Container */
+.urbn-rd-section {
+    background-color: #fff;
+    padding: 5rem 0;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Keyframe Animations */
+@keyframes urbnRdFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.urbn-rd-animate {
+    animation: urbnRdFadeInUp 0.8s ease-out forwards;
+}
+
+/* Badges & Headers */
+.urbn-rd-badge {
+    display: inline-block;
+    padding: 0.45em 1.2em;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #6b9d37;
+    background-color: rgba(94, 169, 47, 0.15);
+    border: 1px solid rgba(94, 169, 47, 0.3);
+    border-radius: 50px;
+    margin-bottom: 1.2rem;
+}
+
+.urbn-rd-title {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+.urbn-rd-lead-text {
+    font-size: 1.15rem;
+    color: #e2e8f0;
+    line-height: 1.8;
+}
+
+.urbn-rd-accent-text {
+    color: #6b9d37;
+    font-size: 40px;
+   
+}
+
+/* Cards */
+.urbn-rd-card {
+    background: #f5f5f5;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 36px;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.urbn-rd-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(94, 169, 47, 0.6);
+    box-shadow: 0 15px 35px rgba(94, 169, 47, 0.15);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Card Accent Top Bar */
+.urbn-rd-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #6b9d37;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.urbn-rd-card:hover::before {
+    opacity: 1;
+}
+
+/* Icon Styling */
+.urbn-rd-icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    background: rgba(94, 169, 47, 0.15);
+    border: 1px solid rgba(94, 169, 47, 0.3);
+    color: #6b9d37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.urbn-rd-card:hover .urbn-rd-icon-box {
+    background: #6b9d37;
+    color: #2D4217;
+    box-shadow: 0 0 20px rgba(94, 169, 47, 0.4);
+}
+
+/* Parameter List Container */
+.urbn-rd-test-container {
+    background: #172f19;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+
+.urbn-rd-test-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.urbn-rd-test-item {
+    padding: 0.65rem 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: #f1f5f9;
+}
+
+.urbn-rd-test-item:last-child {
+    border-bottom: none;
+}
+
+.urbn-rd-test-item i {
+    color: #6b9d37;
+    margin-right: 0.75rem;
+    font-size: 1.1rem;
+}
+
+/* Process Flow Cards */
+.urbn-rd-step-card {
+    background: linear-gradient(2deg, #2D4217 0%, #6B9D37 100%) ;
+    border-radius: 12px;
+    padding: 1.25rem 0.75rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.urbn-rd-step-card:hover {
+    background: rgba(94, 169, 47, 0.15);
+    border-color: #6b9d37;
+    transform: translateY(-3px);
+    color: #000;
+}
+
+.tech-point-heading {
+    font-weight: 700;
+}
+
+.urbn-rd-step-number {
+    width: 38px;
+    height: 38px;
+    background-color: #6b9d37;
+    color: #2D4217;
+    font-weight: 800;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.75rem auto;
+    font-size: 0.95rem;
+}
+
+/* Custom Formulation Banner */
+.urbn-rd-collab-banner {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(94, 169, 47, 0.3);
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+}
+
+.urbn-rd-highlight-box {
+    background: rgba(94, 169, 47, 0.1);
+    border-radius: 14px;
+    padding: 1.5rem;
+    border: 1px solid rgba(94, 169, 47, 0.25);
+}
+.sub-heading-title-inner{
+    font-size: 30px;
+    font-weight: 600;
+}
+/* product details  */
+.sticky-scroll-section {
+    position: relative;
+}
+
+/* Using urbn-product-inner for the main section class */
+.urbn-product-inner {
+    /* min-height: 100vh; */
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #f5f5f5;
+    padding: 100px 0;
+    transition: all 0.5s ease-in-out;
+    /* box-shadow: 0 -10px 30px rgba(0,0,0,0.02); */
+}
+
+.urbn-product-inner:not(:first-child) {
+    margin-top: -1px;
+    /* Prevent gaps */
+}
+
+/* Alternating backgrounds */
+.urbn-product-inner:nth-child(even) {
+    background-color: var(--bg-light);
+}
+
+/* Applying urbn-product-inner to internal wrappers as requested */
+.urbn-product-inner .urbn-product-inner-image-wrapper {
+    width: 100%;
+    height: 450px;
+    background-color: #e9ecef;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.urbn-product-inner .urbn-product-inner-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.urbn-product-inner:hover .urbn-product-inner-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.urbn-product-inner .urbn-product-inner-content {
+    padding: 40px;
+}
+
+.urbn-product-inner .urbn-product-inner-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.urbn-product-inner .urbn-product-inner-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 2.5rem;
+}
+
+.urbn-product-inner .urbn-product-inner-features-label {
+    display: inline-block;
+    font-weight: 700;
+    color: #222;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 4px;
+}
+
+.urbn-product-inner .urbn-product-inner-features-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.urbn-product-inner .urbn-product-inner-features-list li {
+    position: relative;
+    padding-left: 10px;
+    font-weight: 700;
+    color: #333;
+    font-size: 1rem;
+}
+
+.urbn-product-inner .urbn-product-inner-features-list li {
+    list-style-type: disc;
+}
+.urban-solution-item{
+    cursor:pointer;
+}
+
+#urbanSolutionImage{
+    transition:opacity .3s ease-in-out;
+}
+/* industry we serve  */
+
+ .urbn-industry-we {
+      position: relative;
+      background: radial-gradient(circle at 20% 20%, #2D4217 0%, #2D4217 100%);
+      padding: 5rem 0;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .urbn-industry-we::before,
+    .urbn-industry-we::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      z-index: 0;
+      opacity: 0.55;
+    }
+    .urbn-industry-we::before { width: 350px; height: 350px; background: #2D4217; top: 10%; left: 10%; }
+    .urbn-industry-we::after { width: 420px; height: 420px; background: #2D4217; bottom: 5%; right: 10%; }
+
+    .urbn-industry-we .container { position: relative; z-index: 1; }
+    .urbn-industry-we .section-title { font-weight: 700; }
+    .urbn-industry-we .title-accent { color: #2D4217; }
+
+    .urbn-industry-we .industry-list .nav-link {
+      color: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      padding: 0.8rem 1.1rem;
+      margin-bottom: 0.6rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+
+    .urbn-industry-we .industry-list .nav-link i { font-size: 1.15rem; color: #ffffff; }
+
+    .urbn-industry-we .industry-list .nav-link:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .urbn-industry-we .industry-list .nav-link.active {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      box-shadow: 0 8px 20px rgb(4 39 7 / 52%);
+      font-weight: 600;
+    }
+
+    .urbn-industry-we .display-card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+      min-height: 480px;
+    }
+
+    .urbn-industry-we .display-img {
+      height: 100%;
+      min-height: 480px;
+      object-fit: cover;
+      transition: opacity 0.3s ease;
+    }
+
+    .urbn-industry-we .display-overlay {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      right: 12px;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 14px;
+      padding: 1.5rem;
+    }
+
+    .urbn-industry-we .glass-badge {
+      background: rgba(255, 112, 67, 0.25);
+      border: 1px solid rgba(255, 112, 67, 0.5);
+      color: #ffab91;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .urbn-industry-we .card-icon { font-size: 1.5rem; color: #ff7043; }
+
+    .urbn-industry-we .timer-progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #ff7043, #ffab91);
+      width: 0%;
+      z-index: 10;
+      box-shadow: 0 0 10px #ff7043;
+    }
+
+    .urbn-industry-we .timer-progress.active {
+      animation: progressAnim 3s linear infinite;
+    }
+
+    @keyframes progressAnim {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+/* infra page css */
+.urbn-infra-new-section-dark {
+            background: linear-gradient(2deg, #2D4217 0%, #6B9D37 100%) !important;
+            padding: 5rem 0;
+
+        }
+        .urbn-infra-new-section-light {
+            background-color: #f8faf8;
+        }
+        .urbn-infra-new-section-white {
+            background-color: #ffffff;
+            padding: 5rem 0;
+        }
+        .urbn-infra-new-accent-bar {
+            width: 60px;
+            height: 4px;
+            background: #6b9d37;
+            border-radius: 2px;
+        }
+        .urbn-infra-new-card {
+            border: 1px solid rgba(103,182,50,0.12);
+            background: #ffffff;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        .urbn-infra-new-card:hover {
+            border-color: rgba(103,182,50,0.35);
+            box-shadow: 0 8px 30px rgba(103,182,50,0.1);
+            transform: translateY(-2px);
+        }
+        .urbn-infra-new-card-dark {
+            border: 1px solid rgba(103,182,50,0.15);
+            background: rgba(103,182,50,0.04);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        .urbn-infra-new-card-dark:hover {
+            border-color: rgba(103,182,50,0.4);
+            background: rgba(103,182,50,0.08);
+        }
+        .urbn-infra-new-icon-box {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(103,182,50,0.1);
+            border-radius: 10px;
+            color: #6b9d37;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        .urbn-infra-new-icon-box-lg {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(103,182,50,0.1);
+            border-radius: 14px;
+            color: #6b9d37;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .urbn-infra-new-icon-box-outline {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(103,182,50,0.3);
+            border-radius: 50%;
+            color: #6b9d37;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        .urbn-infra-new-stat-card {
+            background: rgba(103,182,50,0.06);
+            border: 1px solid rgba(103,182,50,0.12);
+            border-radius: 14px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .urbn-infra-new-stat-card:hover {
+            background: rgba(103,182,50,0.12);
+            border-color: rgba(103,182,50,0.3);
+            transform: translateY(-3px);
+        }
+        .urbn-infra-new-stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1;
+        }
+        .urbn-infra-new-list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(4,39,7,0.06);
+        }
+        .urbn-infra-new-list-item:last-child {
+            border-bottom: none;
+        }
+        .urbn-infra-new-bullet {
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 50%;
+            margin-top: 7px;
+            flex-shrink: 0;
+        }
+        .urbn-infra-new-highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 18px 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .urbn-infra-new-highlight-item:hover {
+            background: rgba(103,182,50,0.06);
+        }
+        .urbn-infra-new-check-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #6b9d37;
+            border-radius: 50%;
+            color: #2D4217;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+        .urbn-infra-new-qa-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: rgba(103,182,50,0.1);
+            border: 1px solid rgba(103,182,50,0.2);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #6b9d37;
+        }
+        .urbn-infra-new-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(103,182,50,0.2), transparent);
+        }
+        .urbn-infra-new-btn-primary {
+            background: #6b9d37;
+            color: #2D4217;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .urbn-infra-new-btn-primary:hover {
+            background: #5aa52b;
+            color: #2D4217;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(103,182,50,0.3);
+        }
+        .urbn-infra-new-btn-outline {
+            background: transparent;
+            color: #6b9d37;
+            border: 2px solid rgba(103,182,50,0.4);
+            padding: 10px 26px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .urbn-infra-new-btn-outline:hover {
+            background: rgba(103,182,50,0.1);
+            color: #6b9d37;
+            border-color: #6b9d37;
+        }
+        .urbn-infra-new-equipment-grid .urbn-infra-new-card {
+            padding: 1.5rem;
+        }
+        .urbn-infra-new-fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: urbnInfraFadeUp 0.7s ease-out forwards;
+        }
+        @keyframes urbnInfraFadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .urbn-infra-new-delay-1 { animation-delay: 0.1s; }
+        .urbn-infra-new-delay-2 { animation-delay: 0.2s; }
+        .urbn-infra-new-delay-3 { animation-delay: 0.3s; }
+        .urbn-infra-new-delay-4 { animation-delay: 0.4s; }
+        .urbn-infra-new-delay-5 { animation-delay: 0.5s; }
+        .urbn-infra-new-delay-6 { animation-delay: 0.6s; }
+        .urbn-infra-new-delay-7 { animation-delay: 0.7s; }
+        .urbn-infra-new-delay-8 { animation-delay: 0.8s; }
+        .urbn-infra-new-delay-9 { animation-delay: 0.9s; }
+        .urbn-infra-new-delay-10 { animation-delay: 1.0s; }
+        .urbn-infra-new-img-wrapper {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        .urbn-infra-new-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .urbn-infra-new-img-wrapper:hover img {
+            transform: scale(1.03);
+        }
+        .urbn-infra-new-img-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(4,39,7,0.5) 100%);
+            pointer-events: none;
+        }
+        .urbn-infra-new-nav-link {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        .urbn-infra-new-nav-link:hover { color: #6b9d37; }
+        .urbn-infra-new-nav-link-active { color: #6b9d37; }
+        .urbn-infra-new-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(103,182,50,0.1);
+            border: 1px solid rgba(103,182,50,0.2);
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #6b9d37;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .urbn-infra-new-scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 44px;
+            height: 44px;
+            background: #6b9d37;
+            color: #2D4217;
+            border: none;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(103,182,50,0.3);
+        }
+        .urbn-infra-new-scroll-top.urbn-infra-new-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .urbn-infra-new-scroll-top:hover {
+            background: #5aa52b;
+            transform: translateY(-2px);
+        }
+.infra-icons-2 img {
+   width: 100px;
+    color: #6b9d37;
+}
+.infra-ul-points li{
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #000000;
+}
+.infra-ul-points i {
+color: #2D4217;
+}
+.infra-counter-title{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+.infra-counter-title-2{
+    font-size: 24px;
+    color: #fff;
+    font-weight: 800;
+}
+
+/* index page about hover change  */
+.urbn-service-icon {
+    position: relative;
+    width: 60px; /* Adjust as needed */
+    height: 60px;
+}
+
+.urbn-service-icon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.35s ease;
+}
+
+.urbn-icon-default {
+    opacity: 1;
+}
+
+.urbn-icon-hover {
+    opacity: 0;
+}
+
+.urbn-service-item:hover .urbn-icon-default {
+    opacity: 0;
+}
+
+.urbn-service-item:hover .urbn-icon-hover {
+    opacity: 1;
+}
+.advance-sec-r-d{
+ padding:80px 0;
+    background:#f5f5f5;
+}
+
+.research-sec-new{
+    padding:80px 0;
+    background:#fff;
+}
+
+.research-sec-new-item {
+    padding: 20px;
+    height: 100%;
+    border: 1px solid #bdbdbd;
+    border-radius: 15px;
+}
+
+.research-sec-new-icon{
+    width:58px;
+    height:58px;
+    margin-bottom:28px;
+}
+
+.research-sec-new-icon img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+.research-sec-new-title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #6b9d37;
+    margin-bottom: 20px;
+    /* letter-spacing: -0.5px; */
+}
+
+.research-sec-new-desc{
+    font-size:22px;
+    line-height:1.7;
+    color:#444;
+    margin:0;
+    max-width:620px;
+}
+/* career page  */
+.urbn-career-banner{
+    background:#f7f9f4;
+}
+
+.urbn-career-subtitle{
+    color:#6b9d37;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.urbn-career-title{
+    font-size:52px;
+    font-weight:700;
+    color:#2d4217;
+    line-height:1.2;
+}
+
+.urbn-career-title span{
+    color:#6b9d37;
+}
+
+.urbn-career-text{
+    color:#666;
+    line-height:30px;
+    font-size:17px;
+}
+
+.urbn-career-btn{
+    background:#6b9d37;
+    color:#fff;
+    border-radius:50px;
+    padding:14px 35px;
+    transition:.4s;
+}
+
+.urbn-career-btn:hover{
+    background:#2d4217;
+    color:#fff;
+}
+
+.urbn-career-heading{
+    font-size:42px;
+    color:#2d4217;
+    font-weight:700;
+}
+
+.urbn-career-card{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.4s;
+    height:100%;
+}
+
+.urbn-career-card:hover{
+    transform:translateY(-8px);
+}
+
+.urbn-career-icon{
+    width:80px;
+    height:80px;
+    margin:auto;
+    background:#6b9d37;
+    border-radius:50%;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.urbn-career-opening-box{
+    background:#2d4217;
+    color:#fff;
+    padding:60px;
+    border-radius:20px;
+}
+
+.urbn-career-form-section{
+    background:#f8f8f8;
+}
+
+.urbn-career-form-box{
+    background:#fff;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+.urbn-career-input{
+    min-height:55px;
+    border-radius:12px;
+    border:1px solid #ddd;
+}
+
+.urbn-career-input:focus{
+    border-color:#6b9d37;
+    box-shadow:none;
+}
+
+textarea.urbn-career-input{
+    min-height:150px;
+}
+/* Subtitle Badge */
+    .urbn-market-badge {
+      display: inline-block;
+      background-color: #6b9d37;
+      color: #0284c7;
+      border: 1px solid #6b9d37;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Section Headings */
+    .urbn-market-main-title {
+      color: #0f172a;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .urbn-market-lead-text {
+      color: #64748b;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* =====================================================
+       SECTION 1: INTRO (NORMAL LIGHT SECTION)
+       ===================================================== */
+    .urbn-market-intro-section {
+      background-color: #ffffff;
+      padding: 90px 0 60px 0;
+    }
+
+    /* =====================================================
+       SECTION 2: PARALLAX SECTION (DOMESTIC & INTERNATIONAL ONLY)
+       ===================================================== */
+    .urbn-market-parallax-section {
+      position: relative;
+      background-image: url('../images/urban/market-bg.jpg');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 110px 0;
+      overflow: hidden;
+    }
+
+    /* Dark Overlay for contrast */
+    .urbn-market-parallax-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.88) 100%); */
+      /* background: linear-gradient(90deg, #00000091 100%) !important; */
+      z-index: 1;
+    }
+
+    .urbn-market-parallax-container {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Parallax Cards with Modern Glow Effect */
+    .urbn-market-parallax-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 20px;
+      padding: 40px;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+
+    .urbn-market-parallax-card:hover {
+      transform: translateY(-8px);
+      border-color: #ffffff38;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .urbn-market-parallax-icon {
+    width: 64px;
+    height: 64px;
+    background: #2d421700;
+    border: 1px solid #ffffff4a;
+    color: #fff;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin-bottom: 24px;
+    box-shadow: 2px 5px 5px 0px #0000006b;
+}
+
+    .urbn-market-parallax-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .urbn-market-parallax-text {
+      color: #cbd5e1;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* =====================================================
+       SECTION 3: MARKET STRENGTHS (NORMAL LIGHT SECTION)
+       ===================================================== */
+    .urbn-market-strengths-section {
+      background-color: #f8fafc;
+      padding: 90px 0;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .urbn-market-strength-card {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .urbn-market-strength-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08);
+      border-color: #6b9d37;
+    }
+
+    .urbn-market-strength-icon-box {
+      width: 48px;
+      height: 48px;
+      background-color: #6b9d37;
+      color: #fff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .urbn-market-strength-text {
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: #0f172a;
+      margin: 0;
+    }
+   
+
+    /* iOS Mobile Parallax Fallback */
+    @supports (-webkit-touch-callout: none) {
+      .urbn-market-parallax-section {
+        background-attachment: scroll;
+      }
+    }
+@media(max-width:991px){
+
+.urbn-career-title{
+    font-size:38px;
+}
+
+.urbn-career-heading{
+    font-size:26px;
+}
+
+.urbn-career-form-box{
+    padding:30px;
+}
+.rts-section-gap{
+    padding: 60px 0;
+}
+.choose-us-points li{
+    font-size: 16px;
+}
+.urbn-team-section{
+    padding: 60px 0;
+
+}
+}
+@media (min-width: 1200px) {
+    .urban-toggler-col {
+        display: none !important;
+    }
+
+    .urban-navbar-collapse {
+        display: flex !important;
+        visibility: visible !important;
+        height: auto !important;
+    }
+
+    .urban-header-menu {
+        flex-direction: row;
+    }
+  
+  
+}
+/* Large Device */
+@media (max-width:1199px){
+    /* .navbar-expand-lg .navbar-toggler
+
+ {
+        display: none;
+    } */
+       .urba-heading-main-inner-2 {
+    font-size: 30px;
+    }
+  .urban-header-navbar{
+background:#fff
+    }
+    .urban-header-logo img {
+    width: 250px;
+}
+.urban-header-menu {
+    gap: 0px;
+    align-items: start;
+}
+    .research-sec-new-title{
+        font-size:40px;
+    }
+
+    .research-sec-new-desc{
+        font-size:18px;
+    }
+    .urban-toggler-col {
+        display: flex !important;
+    }
+
+    .urban-navbar-collapse:not(.show) {
+        display: none !important;
+    }
+
+    .urban-navbar-collapse.show {
+        display: block !important;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    /* Stack menu items vertically on mobile/tablet */
+    .urban-header-menu {
+        flex-direction: column;
+    }
+
+    .urban-header-menu .nav-link {
+    color: #222;
+    font-size: 17px;
+    font-weight: 600;
+    position: relative;
+}
+
+
+}
+/* Tablet */
+@media (max-width:991px){
+    .urban-header-logo img {
+    width: 200px;
+}
+
+    .research-sec-new{
+        padding:70px 0;
+    }
+
+    .research-sec-new-item{
+        padding:20px;
+    }
+
+    .research-sec-new-title{
+        font-size:34px;
+    }
+
+    .research-sec-new-desc{
+        font-size:17px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:767px){
+
+    .research-sec-new{
+        padding:60px 0;
+    }
+
+    .research-sec-new-title{
+        font-size:22px;
+    }
+
+    .research-sec-new-icon{
+        width:50px;
+        height:50px;
+        margin-bottom:20px;
+    }
+
+    .research-sec-new-desc{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+}
+/* ==========================================================================
+           RESPONSIVE VIEWPORT BREAKPOINTS
+           ========================================================================== */
+@media (max-width:1450px){
+    .urbn-about-mv-img-box {
+        width: 150px;
+        height: 150px;
+    }
+    .urban-products-content {
+    position: relative;
+    bottom: 25px;
+    gap:15px;
+    height: 180px;
+}
+ }
+@media(max-width:1399px) {
+
+    .urban-products-heading h2 {
+        font-size: 48px;
+    }
+
+    .urban-products-heading p {
+        font-size: 24px;
+    }
+    .urban-footer-widget h4, .urban-footer-contact h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2D4217;
+    margin-bottom: 25px;
+    position: relative;
+}
+.urban-header-menu .nav-link{
+    font-size: 16px;
+}
+ .urbn-team-card {
+        padding: 20px !important;
+        height: 650px !important;
+    }
+}
+@media(max-width:1199px) {
+
+   .urban-footer-brand img {
+    max-width: 200px;
+    margin-bottom: 30px;
+   }
+.urban-footer-widget h4, .urban-footer-contact h4 {
+    font-size: 20px !important;
+    font-weight: 700;
+    color: #2D4217;
+    margin-bottom: 25px;
+    position: relative;
+    line-height: 120%;
+
+}
+.urban-footer-widget h4::after, .urban-footer-contact h4::after {
+    content: "";
+    width: 35px;
+    height: 3px;
+    background: #6b9d37;
+    display: block;
+    margin-top: 0px;
+}
+.urban-footer-cta-left h3 {
+    color: #6b9d37;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+.urban-footer-cta-left h2 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+.urbn-career-card {
+padding: 20px;
+}
+.urba-heading-main {
+font-size: 26px;
+}
+.urba-heading-main-inner{
+    font-size: 26px;
+}
+.urbn-market-parallax-card{
+    padding: 30px;
+}
+}
+@media screen and  (min-width: 992px) and (max-width: 1199px) {
+        .urban-products-content{
+height: 250px;
+        }
+
+   .urban-sustain-image {
+        width: 300px;
+        height: 300px;
+    }
+    .urban-sustain-ring{
+        width: 360px;
+        height: 360px;
+    }
+    .urban-sustain-content h4 {
+    font-size: 26px;
+    }
+
+    .urban-sustain-icon {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #6b9d37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #6b9d37;
+    font-size: 42px;
+}
+.urban-sustain-side {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    width: 350px;
+}
+.urban-sustain-wrapper {
+    gap: 80px;
+}
+.urban-sustain-left .urban-sustain-item:nth-child(1) .urban-sustain-icon {
+    right: -70px;
+    top: 10px;
+}
+
+.urban-sustain-left .urban-sustain-item:nth-child(2) .urban-sustain-icon {
+    right: -60px;
+    top: 10px;
+}
+
+.urban-sustain-right .urban-sustain-item:nth-child(1) .urban-sustain-icon {
+    left: -80px;
+    top: 10px;
+}
+
+.urban-sustain-right .urban-sustain-item:nth-child(2) .urban-sustain-icon {
+    left: -75px;
+    top: 10px;
+}
+
+/* Green Dots */
+
+.urban-sustain-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #6b9d37;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.urban-sustain-dot-left-top {
+    left: 40px;
+    top: 160px;
+}
+
+.urban-sustain-dot-left-bottom {
+    left: 30px;
+    bottom: 230px;
+}
+
+.urban-sustain-dot-right-top {
+    right: 80px;
+    top: 165px;
+}
+
+.urban-sustain-dot-right-bottom {
+    right: 45px;
+    bottom: 184px;
+}
+/* Connector Lines */
+
+.urban-sustain-left .urban-sustain-item::after {
+    content: '';
+    position: absolute;
+    right: -125px;
+    top: 55px;
+    width: 70px;
+    height: 2px;
+    background: #6b9d37;
+}
+
+.urban-sustain-right .urban-sustain-item::before {
+           content: '';
+        position: absolute;
+        left: -150px;
+        top: 68px;
+        width: 80px;
+        height: 2px;
+        background: #6b9d37;
+}
+.urban-hero-stat-item h4{
+    font-size:26px;
+}
+.urban-products-content {
+    position: relative;
+    bottom: 25px;
+    gap:15px;
+}
+.urban-products-image{
+    height: 100%;
+}
+
+}
+@media screen and  (min-width: 768px) and (max-width: 991px) {
+        .urban-products-content{
+height: 250px;
+        }
+
+   .urban-sustain-image {
+        width: 300px;
+        height: 300px;
+    }
+    .urban-sustain-ring{
+        width: 360px;
+        height: 360px;
+    }
+    .urban-sustain-content h4 {
+    font-size: 26px;
+    }
+
+    .urban-sustain-icon {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #6b9d37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #6b9d37;
+    font-size: 42px;
+}
+.urban-sustain-side {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    width: 350px;
+}
+.urban-sustain-wrapper {
+    gap: 100px;
+}
+.urban-sustain-left .urban-sustain-item:nth-child(1) .urban-sustain-icon {
+    right: -70px;
+    top: 10px;
+}
+
+.urban-sustain-left .urban-sustain-item:nth-child(2) .urban-sustain-icon {
+    right: -60px;
+    top: 10px;
+}
+
+.urban-sustain-right .urban-sustain-item:nth-child(1) .urban-sustain-icon {
+    left: -80px;
+    top: 10px;
+}
+
+.urban-sustain-right .urban-sustain-item:nth-child(2) .urban-sustain-icon {
+    left: -75px;
+    top: 10px;
+}
+
+/* Green Dots */
+
+.urban-sustain-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #6b9d37;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.urban-sustain-dot-left-top {
+    left: 40px;
+    top: 160px;
+}
+
+.urban-sustain-dot-left-bottom {
+    left: 30px;
+    bottom: 230px;
+}
+
+.urban-sustain-dot-right-top {
+    right: 80px;
+    top: 165px;
+}
+
+.urban-sustain-dot-right-bottom {
+    right: 45px;
+    bottom: 184px;
+}
+/* Connector Lines */
+
+.urban-sustain-left .urban-sustain-item::after {
+    content: '';
+    position: absolute;
+    right: -125px;
+    top: 55px;
+    width: 70px;
+    height: 2px;
+    background: #6b9d37;
+}
+
+.urban-sustain-right .urban-sustain-item::before {
+           content: '';
+        position: absolute;
+        left: -150px;
+        top: 68px;
+        width: 80px;
+        height: 2px;
+        background: #6b9d37;
+}
+.urban-hero-stat-item h4{
+    font-size:26px;
+}
+.urban-products-content {
+    position: relative;
+    bottom: 25px;
+    gap:15px;
+}
+.urban-products-image{
+    height: 100%;
+}
+
+}
+@media (max-width:1150px){
+    .urban-products-content{
+        display: block;
+    }
+    .urban-products-text{
+        margin-top: 15px;
+    }
+}
+@media(max-width:991px) {
+    .urban-products-content {
+    height: auto;
+}
+    .choose-us-points{
+        padding: 0px;
+    }
+     .urbn-team-card {
+        padding: 20px !important;
+        height: 700px !important;
+    }
+      .urban-header-navbar {
+        padding: 10px 15px;
+        background: #fff;
+    }
+
+    .urban-header-menu {
+        gap: 0;
+        margin-top: 20px;
+        align-items: flex-start;
+    }
+
+    .urban-header-menu .nav-link,
+    .urban-header-menu .has-dropdown>a {
+        padding: 12px 0;
+    }
+
+    .urban-header-menu .nav-item,
+    .urban-header-menu .has-dropdown {
+        width: 100%;
+    }
+
+    /* Mobile dropdown */
+    .urban-header-menu .sub-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+        min-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        background: #f8f8f8;
+        padding: 0;
+        margin-top: 5px;
+    }
+
+    .urban-header-menu .has-dropdown.active .sub-menu {
+        display: block;
+    }
+
+    .urban-header-menu .sub-menu li a {
+        padding: 12px 15px;
+    }
+
+    .urban-header-menu .has-dropdown>a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+      .urban-hero-content h1 {
+        font-size: 42px;
+    }
+
+    .urban-hero-content p {
+        font-size: 18px;
+    }
+
+    .urban-hero-slide {
+        min-height: 700px;
+    }
+
+
+    .urban-sustain-wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .urban-sustain-side {
+        width: 100%;
+        gap: 40px;
+    }
+
+    .urban-sustain-center {
+        width: 100%;
+        height: auto;
+    }
+
+    .urban-sustain-ring {
+        width: 350px;
+        height: 350px;
+    }
+
+    .urban-sustain-image {
+        width: 260px;
+        height: 260px;
+    }
+
+    .urban-sustain-icon {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin-bottom: 20px;
+    }
+
+    .urban-sustain-left .urban-sustain-item::after,
+    .urban-sustain-right .urban-sustain-item::before {
+        display: none;
+    }
+
+    .urban-sustain-dot {
+        display: none;
+    }
+
+    .urban-sustain-content h4 {
+        font-size: 26px;
+    }
+
+    .urban-sustain-content p {
+        font-size: 18px;
+    }
+
+    .urban-sustain-heading h2 {
+        font-size: 34px;
+    }
+
+    .urban-sustain-heading p {
+        font-size: 18px;
+        width:100%;
+    }
+
+    .urban-innovation-content h2 {
+        font-size: 38px;
+    }
+
+    .urban-innovation-content p {
+        font-size: 18px;
+    }
+
+    .urban-sustain-wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .urban-sustain-side {
+        width: 100%;
+        gap: 40px;
+    }
+
+    .urban-sustain-center {
+        width: 100%;
+        height: auto;
+    }
+
+    .urban-sustain-ring {
+        width: 350px;
+        height: 350px;
+    }
+
+    .urban-sustain-image {
+        width: 260px;
+        height: 260px;
+    }
+
+    .urban-sustain-icon {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin-bottom: 20px;
+    }
+
+    .urban-sustain-left .urban-sustain-item::after,
+    .urban-sustain-right .urban-sustain-item::before {
+        display: none;
+    }
+
+    .urban-sustain-content h4 {
+        font-size: 28px;
+    }
+
+    .urban-sustain-content p {
+        font-size: 18px;
+    }
+
+    .urban-sustain-heading h2 {
+        font-size: 26px;
+    }
+
+    .urban-sustain-heading p {
+        font-size: 18px;
+    }
+
+    .urban-sustain-dot {
+        display: none;
+    }
+ .urban-products {
+        padding: 70px 0;
+    }
+
+    .urban-products-heading h2 {
+        font-size: 38px;
+    }
+
+    .urban-products-heading p {
+        font-size: 18px;
+    }
+
+    .urban-products-image {
+        height: auto;
+    }
+     .urbn-about-mv-card {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding:20px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .urbn-about-mv-img-box {
+        position: relative !important;
+        top: 0 !important;
+        transform: translateY(0) !important;
+        margin-bottom: 25px;
+        z-index: 3;
+    }
+
+    .urbn-about-mv-card:hover .urbn-about-mv-img-box {
+        transform: scale(1.05);
+    }
+
+    .urbn-about-mv-card-mission .urbn-about-mv-img-mission {
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .urbn-about-mv-card-vision {
+        display: flex;
+        flex-direction: column-reverse !important;
+    }
+
+    .urbn-about-mv-card-vision .urbn-about-mv-img-vision {
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+
+    .urban-footer-main {
+        display: block;
+    }
+
+    .urban-footer-widget,
+    .urban-footer-contact {
+        margin-top: 10px;
+    }
+
+    .urban-footer-contact {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .urban-footer-cta-left h2,
+    .urban-footer-cta-left h3 {
+        font-size: 34px;
+    }
+
+    .urban-footer-cta-text {
+        margin: 25px 0;
+        font-size: 18px;
+    }
+
+    .urban-footer-divider {
+        display: none;
+    }
+    .urbn-product-inner {
+        position: relative;
+        min-height: auto;
+        padding: 80px 0;
+    }
+
+    .urbn-product-inner .urbn-product-inner-image-wrapper {
+        margin-bottom: 40px;
+        height: 350px;
+    }
+
+    .urbn-product-inner .urbn-product-inner-title {
+        font-size: 2.2rem;
+    }
+
+    .urbn-product-inner .urbn-product-inner-features-list {
+        grid-template-columns: 1fr;
+    }
+     .urbn-contact-social {
+        position: static;
+        width: 100%;
+        margin-top: 30px;
+        padding: 20px 0;
+        text-align: start;
+    }
+     .urbn-contact-form-area {
+        padding: 50px 30px;
+    }
+
+    .urbn-contact-title {
+        font-size: 42px;
+    }
+
+    .urbn-contact-info {
+        margin: 0;
+    }
+
+    .urbn-contact-btn {
+        width: 100%;
+    }
+
+    
+      .urbn-team-main-title {
+        font-size: 2.5rem;
+    }
+
+    .urbn-team-card {
+        padding: 20px !important;
+        height: auto !important;
+    }
+
+    .urbn-contact-shape-top {
+    width: 200px;
+    height: 100px;
+    top: 0;
+    right: 0;
+}
+   .urbn-market-parallax-card{
+    padding: 20px;
+}
+.rts__about__area .about__content.style-3{
+    margin-left:0px !important;
+}
+
+.infra-ul-points li{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+ .urbn-infra-new-section-white {
+            background-color: #ffffff;
+            padding: 3rem 0;
+        }
+        .urbn-infra-new-section-dark {
+            background: linear-gradient(2deg, #2D4217 0%, #6B9D37 100%) !important;
+            padding: 3rem 0;
+
+        }
+    .infra-counter-title-2 {
+    font-size: 20px;
+    }
+    .urbn-infra-new-stat-number{
+    font-size: 26px;
+    }
+    .urbn-infra-new-stat-card{
+        padding: 20px 0px;
+    }
+    .advance-sec-r-d {
+    padding: 60px 0;
+    background: #f5f5f5;
+}
+.urbn-rd-card{
+    padding: 30px 20px;
+}
+.urbn-rd-accent-text {
+    color: #6b9d37;
+    font-size: 20px;   
+}
+.urban-footer-main{
+    padding-bottom: 0px;
+}
+.urbn-product-inner .urbn-product-inner-content{
+    padding: 20px;
+}
+.rts__about__area .about__content .about__stats{
+    padding: 20px;
+}
+.urbn-about-mv-main-title{
+    font-size: 30px;
+}
+.urbn-about-mv-card-mission {
+    padding-left: 20px;
+    margin-left: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.urbn-about-mv-card-vision {
+    padding-right: 20px;
+    margin-right: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.urbn-about-mv-card-title{
+    text-align: center;
+}
+.home-why-choose-us-card-body {
+width: 100%;
+}
+.urban-heading-sub
+
+ {
+    font-size: 26px;
+ }
+
+}
+
+@media(max-width:767px) {
+    
+
+
+
+
+    .rts-service-wrapper-two .single-service-item{
+        padding: 20px;
+    }
+    .urban-hero-stat-item h4 {
+    font-size: 26px;
+    }
+    .urban-hero-stat-icon img{
+        width: 50px;
+      
+    }
+    .urban-hero-stats{
+            background: linear-gradient(90deg, #2D4217 0%, #6B9D37 100%) !important;
+    }
+     .urban-hero-stat-item {
+        padding-left: 0px;
+        margin-bottom: 1rem;
+     }
+
+    .urban-sustain-icon {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #6b9d37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #6b9d37;
+    font-size: 42px;
+}
+     .urban-sustain-ring {
+        width: 300px;
+        height: 300px;
+    }
+    .urban-para-main {
+    width: 100%;
+    }
+    
+ .urban-products-heading h2 {
+        font-size: 30px;
+    }
+
+    .urban-products-content {
+        padding: 15px;
+    }
+
+    .urban-products-text h3 {
+        font-size: 18px;
+    }
+
+    .urban-innovation-experts {
+        left: 10px;
+        bottom: 30px;
+        padding: 12px 15px;
+    }
+
+    .urban-innovation-content h2 {
+        font-size: 30px;
+    }
+
+    .urban-innovation-progress-box {
+        margin-bottom: 30px;
+    }
+ .urbn-team-card-inner {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .urbn-team-img-wrapper {
+        width: 100%;
+        height: 100%;
+        border-radius: 0% !important;
+        margin-bottom: 25px;
+    }
+
+    .urbn-team-details {
+        padding-left: 0;
+    }
+
+    .urbn-team-quote-accent {
+        display: none;
+    }
+    .urban-footer-cta {
+        padding: 25px;
+    }
+
+    .urban-footer-cta-left {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .urban-footer-cta-left h2,
+    .urban-footer-cta-left h3 {
+        font-size: 26px;
+    }
+    .urbn-contact-shape-top {
+    width: 200px;
+    height: 100px;
+    top: 0;
+    right: 0;
+}
+}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+    .innvo-img-urban .urban-badge {
+        padding: 0.75rem 1rem;
+        min-width: 200px;
+        left: 2%;
+        bottom: 18%;
+    }
+
+    .innvo-img-urban .badge-icon-wrapper {
+        width: 45px;
+        height: 45px;
+    }
+
+    .innvo-img-urban .badge-number {
+        font-size: 1.35rem;
+    }
+
+    .innvo-img-urban .badge-text {
+        font-size: 0.75rem;
+    }
+     .urbn-contact-shape-left{
+        display: none;
+    }.urbn-contact-shape-top,
+    .urbn-contact-shape-bottom {
+        width: 80px;
+        height: 0px;
+    }
+    .urbn-contact-social {
+    position: absolute;
+    right: 0%;
+    bottom: 0px;
+    /* width: 180px; */
+    /* height: 70px; */
+    background: #6b9d37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    padding: 20px;
+}
+.urba-heading-main-inner-2{
+    font-size: 26px;
+}
+.urbn-contact-info {
+    background: #2D4217;
+    color: #fff;
+    padding: 70px 30px;
+    position: relative;
+    z-index: 2;
+    margin: 60px 0;
+}
+.urbn-contact-info-item{
+    margin-bottom: 20px;
+}
+}

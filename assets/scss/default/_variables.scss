@@ -1,0 +1,61 @@
+:root {
+
+  /* Text Color */
+  --rts-para: #6B7280;
+  --rts-heading: #111827;
+  --rts-black: #000000;
+  --rts-white: #ffffff;
+  --rts-neon: #6b9d37;
+
+  /* Background Color */
+  --btn-color: #6b9d37;
+  --heading-color: #002524;
+  --heading-color-2: #DFFF03;
+  --heading-color-3: #FAFFD7;
+  --heading-color-4: #34A853;
+  --heading-color-5: #EBFFF1;
+  --rts-border: rgba(0, 37, 36, 0.1);
+  --transparent: transparent;
+
+  --transition: all 0.3s;
+  --color-success: #26cf4b;
+  --color-danger: #ff0003;
+  --color-warning: #ff8f3c;
+  --color-info: #1ba2db;
+  --color-facebook: #3b5997;
+  --color-twitter: #1ba1f2;
+  --color-youtube: #ed4141;
+  --color-linkedin: #0077b5;
+  --color-pinterest: #e60022;
+  --color-instagram: #c231a1;
+  --color-vimeo: #00adef;
+  --color-twitch: #6441a3;
+  --color-discord: #7289da;
+
+  /* typhography */
+  --h1: 80px;
+  --h2: 64px;
+  --h3: 48px;
+  --h4: 40px;
+  --h5: 24px;
+  --h6: 20px;
+  --20: 20px;
+  --18: 18px;
+  --p: 16px;
+  --p-sm: 16px;
+  --p-xs: 14px;
+
+  // font family
+  --font-primary: "Instrument Sans", sans-serif;
+  --font-secondary: "Plus Jakarta Sans", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+
+  // font weight
+  --f-regular: 400;
+  --f-medium: 500;
+  --f-semi-bold: 600;
+  --f-bold: 700;
+  --f-extra-bold: 800;
+
+}

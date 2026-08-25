@@ -1,0 +1,130 @@
+.rts__faq__area {
+     background: #F9FAFB;
+
+     &.inner-bg {
+          background: var(--rts-white);
+
+          .faq__accordion__wrapper {
+               .accordion {
+                    &-item {
+                         background: #F9FAFB;
+                    }
+               }
+          }
+     }
+
+     .section-title {
+          align-self: start;
+          position: sticky;
+          top: 100px;
+
+          &.inner-style {
+               position: static;
+          }
+     }
+}
+
+
+.faq__accordion__wrapper {
+     .accordion {
+          &-item {
+               border-color: transparent;
+               border-radius: 10px;
+               background: var(--rts-white);
+               overflow: hidden;
+               padding: 10px;
+
+               &.style-2 {
+                    background: var(--heading-color-3);
+               }
+
+               &:not(:last-child) {
+                    margin-bottom: 16px;
+               }
+          }
+
+          &-button {
+               background: transparent;
+               align-items: start;
+               gap: 30px;
+
+               @include mq($xs) {
+                    gap: 0;
+               }
+
+               .text {
+                    display: flex;
+                    gap: 30px;
+
+                    @include mq($xs) {
+                         flex-wrap: wrap;
+                    }
+               }
+
+               &:focus {
+                    box-shadow: none;
+                    outline: none;
+               }
+
+               .number {
+                    color: var(--rts-heading);
+                    font-size: 24px;
+                    line-height: 1.4;
+               }
+
+               .title {
+                    color: var(--rts-heading);
+                    font-size: 20px;
+                    font-family: var(--font-primary);
+                    font-weight: var(--f-medium);
+                    line-height: 1.4;
+                    letter-spacing: -0.04em;
+                    margin-bottom: 0;
+
+                    @include mq($xl) {
+                         br {
+                              display: none;
+                         }
+                    }
+
+                    @include mq($lg) {
+                         br {
+                              display: none;
+                         }
+                    }
+               }
+
+               &::after {
+                    display: none;
+               }
+
+               .icon {
+                    margin-left: auto;
+                    color: var(--rts-heading);
+                    transition: var(--transition);
+               }
+
+               &.collapsed .icon {
+                    transform: rotate(0deg);
+               }
+
+               &:not(.collapsed) .icon {
+                    transform: rotate(180deg);
+               }
+
+               &:not(.collapsed) {
+                    box-shadow: none;
+               }
+
+          }
+
+          &-body {
+               padding: 10px 45px 20px 85px;
+               color: var(--rts-para);
+
+               @include mq($xs) {
+                    padding: 10px;
+               }
+          }
+     }
+}

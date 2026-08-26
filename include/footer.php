@@ -160,11 +160,11 @@
 
             <div class="row align-items-center">
 
-                <div class="col-md-6">
-                    <p>© 2026 URBNFETTCH. All Rights Reserved.</p>
+                <div class="col-md-12 text-center">
+                    <p>© 2026 URBNFETTCH. All Rights Reserved. Designed by <span><a class="m-0 fw-bold text-dark" href="https://www.royalways.com/" target="_blank">Royalways</a></span></p>
                 </div>
 
-                <div class="col-md-6 text-md-end">
+                <!-- <div class="col-md-6 text-md-end">
 
                     <a href="#">Privacy Policy</a>
                     <span>|</span>
@@ -174,7 +174,7 @@
 
                     <a href="#">Sitemap</a>
 
-                </div>
+                </div> -->
 
             </div>
 

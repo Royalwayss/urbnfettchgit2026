@@ -434,7 +434,7 @@
                         <div class="urbn-team-card-inner gap-4">
                             <!-- Leader Image -->
                             <div class="urbn-team-img-wrapper shadow-sm mb-3">
-                                <img src="assets/images/urban/team1.jpg" alt="Mr. Sanil Kapoor" class="urbn-team-img">
+                                <img src="assets/images/urban/user.png" alt="Mr. Sanil Kapoor" class="urbn-team-img">
                             </div>
                             <!-- Profile Copy -->
                             <div class="urbn-team-details flex-grow-1">
@@ -470,7 +470,7 @@
                         <div class="urbn-team-card-inner gap-4">
                             <!-- Leader Image -->
                             <div class="urbn-team-img-wrapper shadow-sm mb-3">
-                                <img src="assets/images/urban/team3.jpg" alt="Mr. Sanil Kapoor" class="urbn-team-img">
+                                <img src="assets/images/urban/user.png" alt="Mr. Sanil Kapoor" class="urbn-team-img">
                             </div>
                             <!-- Profile Copy -->
                             <div class="urbn-team-details flex-grow-1">
@@ -499,7 +499,7 @@
                         <div class="urbn-team-card-inner gap-4">
                             <!-- Leader Image -->
                             <div class="urbn-team-img-wrapper shadow-sm mb-3">
-                                <img src="assets/images/urban/team2.jpg" alt="Mr. Sanil Kapoor" class="urbn-team-img">
+                                <img src="assets/images/urban/user.png" alt="Mr. Sanil Kapoor" class="urbn-team-img">
                             </div>
                             <!-- Profile Copy -->
                             <div class="urbn-team-details flex-grow-1">

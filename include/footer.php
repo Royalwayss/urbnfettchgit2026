@@ -132,7 +132,11 @@
 
                             <li>
                                 <span><i class="fa-solid fa-phone"></i></span>
-                                <a href="tel:+918753003200">+91 8753003200</a>
+                                <a href="tel:+918753003200">+91 8753003200</a> 
+                            </li>
+                             <li>
+                                <span><i class="fa-solid fa-phone"></i></span>
+                                <a href="tel:+917010101776">+91 7010101776</a>
                             </li>
                             
 
